@@ -11,16 +11,16 @@ current: IDisplayShows
   constructor() { 
     this.current = {
       name: 'Girls',
-      genres: 'Drama | Adventure | Fantasy',
+      genres: 'Romance | Drama',
       lanuage: 'English',
       status: 'Ended',
-      runtime: 60,
+      runtime: 30,
       image: '',
       summury: ''
 }
     } as IDisplayShows {}
 
-  ngOnInit() {}
+      ngOnInit()
 
 }
    

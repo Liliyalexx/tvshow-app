@@ -1,1 +1,15 @@
-<p>display-shows-info works!</p>
+<div>
+  <div>
+    <span>
+      {{current.name}}, 
+      <br>{{current.genres}},
+      <br>{{current.language}},
+       <br>{{curremt.status}},
+       <br>{{curremt.runtime}},
+       <img [src] ='current,image'>
+       <span>{{current.summary | summary:'fullSummary'}}</span>
+
+    </span>
+  </div>
+  <div>{{current. status}}</div>
+</div>

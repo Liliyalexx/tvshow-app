@@ -1,14 +1,13 @@
 export interface IDisplayShowsData {
+  show: {
   name: string,
-  genres: [
-    string, string
-  ],
-  lanuage: string,
+  genres: string,
+  language: string,
   status: string,
-  runtime: number
+  runtime: number,
   image: {
     medium: string
   },
-  summury: string
-
+  summary: string
+  }
 }

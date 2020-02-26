@@ -1,16 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-
-import { DisplayShowsInfoService } from './display-shows.service';
+import{HttpClientTestingModule} from '@angular/common/http/testing'
+import { DisplayShowsService } from './display-shows.service';
 
 describe('DisplayShowsService', () => {
-  let service: DisplayShowsInfoService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(DisplayShowsInfoService);
-  });
+  beforeEach(() => TestBed.configureTestingModule({
+    imports:[HttpClientTestingModule]
+  }));
+    
 
   it('should be created', () => {
+    const service: DisplayShowsService = TestBed.get(DisplayShowsService);
     expect(service).toBeTruthy();
   });
 });

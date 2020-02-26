@@ -1,15 +1,28 @@
-<div>
-  <div>
-    <span>
-      {{current.name}}, 
-      <br>{{current.genres}},
-      <br>{{current.language}},
-       <br>{{curremt.status}},
-       <br>{{curremt.runtime}},
-       <img [src] ='current,image'/>
-       <span>{{current.summary | summary:'fullSummary'}}</span>
+<div *ngIf = "current">
 
+<img [src] = "current.image"/>
+
+  <div class=description>
+    <span class = "namegenres">
+      Name of the Show: {{current.name}}, 
+      <br>
+      The Genre of the Show: {{current.genres}},
     </span>
-  </div>
-  <div>{{current. status}}</div>
+    <br>
+      <span class="langandstatus">
+        Current Language: {{current.language}},
+        <br>
+       Current Status: {{current.status}},
+      </span>
+      <br>
+      Current runtime: {{current.runtime}} min,
+      <br>
+      <br>
+      <div>
+       <span class="summary">
+         The Summary of the Show: {{current.summary}}
+       </span>
+      </div>
+      <br>
+    
 </div>

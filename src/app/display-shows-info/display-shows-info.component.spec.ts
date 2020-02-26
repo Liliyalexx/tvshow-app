@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DisplayShowsInfoComponent } from './display-shows-info.component';
+import { DisplayShowsService } from '../display-shows.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TVFakeService } from '../tvfake.service';
 
 describe('DisplayShowsInfoComponent', () => {
   let component: DisplayShowsInfoComponent;
@@ -8,7 +10,9 @@ describe('DisplayShowsInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisplayShowsInfoComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ DisplayShowsInfoComponent ],
+      providers: [{provide: DisplayShowsService, useClass: TVFakeService}]
     })
     .compileComponents();
   }));

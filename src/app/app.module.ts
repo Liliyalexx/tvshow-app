@@ -19,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     DisplayShowsInfoComponent,
-    ShowSearchComponent
+    ShowSearchComponent    
   ],
   imports: [
     BrowserModule,
